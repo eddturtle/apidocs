@@ -9,9 +9,11 @@ This Laravel package provides an API Documentation generator based upon your Rou
 
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `f2m2/apidocs`.
 
-    "require-dev": {
-        "f2m2/apidocs": "dev-master"
-    }
+```json
+"require-dev": {
+    "f2m2/apidocs": "dev-master"
+}
+```
 
 Next, update Composer from the Terminal:
 
@@ -43,27 +45,29 @@ Notes
 
 Create a prefix for your routes with an API Version.  i.e. 'api/v1
 
-    Route::group(['prefix' => 'api/v1'], function(){
-         // ...
-    });
+```php
+Route::group(['prefix' => 'api/v1'], function() {
+    // ...
+});
+```
 
 ##### DocBlock Example
 Below is a docBlock example.
 
-    /**
-    * Display the specified resource.
-    * GET /user/{id}
-    *
-    * @param  int  $id  The id of a User
-    * @return Response
-    */
-    public function show($id)
-    {
-        // Display User
-    }
-
+```php
+/**
+ * Display the specified resource.
+ * GET /user/{id}
+ *
+ * @param  int  $id  The id of a User
+ * @return Response
+ */
+public function show($id)
+{
+    // Display User
+}
+```
 License
 -------
 
 See [LICENSE](LICENSE.md) file.
-
